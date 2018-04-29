@@ -41,5 +41,5 @@
     = f.number_field :number_inventory
   .field
     = f.label :provider
-    = f.text_field :provider
+    = f.collection_select :provider_id, Provider.all, :id, :name
   .actions = f.submit
