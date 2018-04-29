@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @provider.name
+p
+  strong Address:
+  = @provider.address
+p
+  strong Tax code:
+  = @provider.tax_code
+
+=> link_to 'Edit', edit_provider_path(@provider)
+'|
+=< link_to 'Back', providers_path

@@ -1,0 +1,25 @@
+h1 Listing providers
+
+table
+  thead
+    tr
+      th Name
+      th Address
+      th Tax code
+      th
+      th
+      th
+
+  tbody
+    - @providers.each do |provider|
+      tr
+        td = provider.name
+        td = provider.address
+        td = provider.tax_code
+        td = link_to 'Show', provider
+        td = link_to 'Edit', edit_provider_path(provider)
+        td = link_to 'Destroy', provider, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Provider', new_provider_path

@@ -1,0 +1,43 @@
+h1 Listing products
+
+table
+  thead
+    tr
+      th Name
+      th Type
+      th Uses
+      th Price
+      th Price
+      th Unit
+      th Date import
+      th Date export
+      th Number import
+      th Number export
+      th Number inventory
+      th Provider
+      th
+      th
+      th
+
+  tbody
+    - @products.each do |product|
+      tr
+        td = product.name
+        td = product.type
+        td = product.uses
+        td = product.price
+        td = product.price
+        td = product.unit
+        td = product.date_import
+        td = product.date_export
+        td = product.number_import
+        td = product.number_export
+        td = product.number_inventory
+        td = product.provider
+        td = link_to 'Show', product
+        td = link_to 'Edit', edit_product_path(product)
+        td = link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Product', new_product_path
