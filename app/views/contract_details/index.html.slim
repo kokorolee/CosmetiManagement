@@ -1,0 +1,19 @@
+h1 Listing contract_details
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @contract_details.each do |contract_detail|
+      tr
+        td = link_to 'Show', contract_detail
+        td = link_to 'Edit', edit_contract_detail_path(contract_detail)
+        td = link_to 'Destroy', contract_detail, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Contract detail', new_contract_detail_path

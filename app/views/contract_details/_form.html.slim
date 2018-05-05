@@ -1,0 +1,9 @@
+= form_for @contract_detail do |f|
+  - if @contract_detail.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@contract_detail.errors.count, "error")} prohibited this contract_detail from being saved:"
+      ul
+        - @contract_detail.errors.full_messages.each do |message|
+          li = message
+
+  .actions = f.submit
