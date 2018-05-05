@@ -1,17 +1,11 @@
 p#notice = notice
 
 p
-  strong Date:
-  = @contract.date
+  strong Date create:
+  = @contract.date_create
 p
-  strong Total:
-  = @contract.total
-p
-  strong User:
-  = @contract.user
-p
-  strong Provider:
-  = @contract.provider
+  strong Total money:
+  = @contract.total_money
 
 => link_to 'Edit', edit_contract_path(@contract)
 '|

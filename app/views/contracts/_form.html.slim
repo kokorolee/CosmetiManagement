@@ -7,15 +7,9 @@
           li = message
 
   .field
-    = f.label :date
-    = f.date_select :date
+    = f.label :date_create
+    = f.date_select :date_create
   .field
-    = f.label :total
-    = f.text_field :total
-  .field
-    = f.label :user
-    = f.collection_select :user_id, User.all, :id, :name
-  .field
-    = f.label :provider
-    = f.collection_select :provider_id, Provider.all, :id, :name
+    = f.label :total_money
+    = f.text_field :total_money
   .actions = f.submit
