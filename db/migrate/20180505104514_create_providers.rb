@@ -3,6 +3,7 @@ class CreateProviders < ActiveRecord::Migration[5.1]
     create_table :providers do |t|
       t.string :name
       t.string :address
+      t.string :phone_no
       t.string :tax_code
 
       t.timestamps

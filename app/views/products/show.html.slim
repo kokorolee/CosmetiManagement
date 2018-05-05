@@ -4,14 +4,14 @@ p
   strong Name:
   = @product.name
 p
+  strong Description:
+  = @product.description
+p
   strong Type:
   = @product.type
 p
-  strong Uses:
-  = @product.uses
-p
-  strong Price:
-  = @product.price
+  strong Usage:
+  = @product.usage
 p
   strong Price:
   = @product.price
@@ -22,8 +22,8 @@ p
   strong Date import:
   = @product.date_import
 p
-  strong Date export:
-  = @product.date_export
+  strong Date:
+  = @product.date
 p
   strong Number import:
   = @product.number_import
@@ -31,11 +31,8 @@ p
   strong Number export:
   = @product.number_export
 p
-  strong Number inventory:
-  = @product.number_inventory
-p
-  strong Provider:
-  = @product.provider
+  strong Number stock:
+  = @product.number_stock
 
 => link_to 'Edit', edit_product_path(@product)
 '|

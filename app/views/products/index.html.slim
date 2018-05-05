@@ -4,17 +4,16 @@ table
   thead
     tr
       th Name
+      th Description
       th Type
-      th Uses
-      th Price
+      th Usage
       th Price
       th Unit
       th Date import
-      th Date export
+      th Date
       th Number import
       th Number export
-      th Number inventory
-      th Provider
+      th Number stock
       th
       th
       th
@@ -23,17 +22,16 @@ table
     - @products.each do |product|
       tr
         td = product.name
+        td = product.description
         td = product.type
-        td = product.uses
-        td = product.price
+        td = product.usage
         td = product.price
         td = product.unit
         td = product.date_import
-        td = product.date_export
+        td = product.date
         td = product.number_import
         td = product.number_export
-        td = product.number_inventory
-        td = product.provider
+        td = product.number_stock
         td = link_to 'Show', product
         td = link_to 'Edit', edit_product_path(product)
         td = link_to 'Destroy', product, data: { confirm: 'Are you sure?' }, method: :delete
