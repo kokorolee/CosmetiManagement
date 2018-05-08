@@ -5,6 +5,7 @@ class CreateDeliverySlips < ActiveRecord::Migration[5.1]
       t.date :date_received
       t.decimal :total_money
 
+      t.belongs_to :agency, foreign_key: true
       t.timestamps
     end
   end

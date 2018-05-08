@@ -41,10 +41,17 @@ if Provider.pluck(:id).empty?
       tax_code: Faker::Number.number(10),
     )
     for i in 1..rand(1..20)
+      date = Date.today - rand(30)
       a.products.create(
         name: Faker::Dune.title,
         description: Faker::Dune.quote,
         usage: Faker::Job.key_skill,
+      )
+      DeliverySlip.create(
+        date_deliver: date,
+        date_received: date + rand(20),
+        total_money: rand(10**3..10**6),
+        agency_id: a.id
       )
     end
   end

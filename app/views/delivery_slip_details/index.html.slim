@@ -1,0 +1,27 @@
+h1 Listing delivery_slip_details
+
+table
+  thead
+    tr
+      th Amount
+      th Unit
+      th Product
+      th Delivery slip
+      th
+      th
+      th
+
+  tbody
+    - @delivery_slip_details.each do |delivery_slip_detail|
+      tr
+        td = delivery_slip_detail.amount
+        td = delivery_slip_detail.unit
+        td = delivery_slip_detail.product
+        td = delivery_slip_detail.delivery_slip
+        td = link_to 'Show', delivery_slip_detail
+        td = link_to 'Edit', edit_delivery_slip_detail_path(delivery_slip_detail)
+        td = link_to 'Destroy', delivery_slip_detail, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Delivery slip detail', new_delivery_slip_detail_path

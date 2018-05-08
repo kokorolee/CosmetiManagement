@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :delivery_slip_details
   resources :import_coupons
   resources :delivery_slips
   resources :agencies

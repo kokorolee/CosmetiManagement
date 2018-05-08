@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508190548) do
+ActiveRecord::Schema.define(version: 20180508192720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,12 +57,25 @@ ActiveRecord::Schema.define(version: 20180508190548) do
     t.index ["user_id"], name: "index_contracts_on_user_id"
   end
 
+  create_table "delivery_slip_details", force: :cascade do |t|
+    t.integer "amount"
+    t.string "unit"
+    t.bigint "product_id"
+    t.bigint "delivery_slip_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["delivery_slip_id"], name: "index_delivery_slip_details_on_delivery_slip_id"
+    t.index ["product_id"], name: "index_delivery_slip_details_on_product_id"
+  end
+
   create_table "delivery_slips", force: :cascade do |t|
     t.date "date_deliver"
     t.date "date_received"
     t.decimal "total_money"
+    t.bigint "agency_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["agency_id"], name: "index_delivery_slips_on_agency_id"
   end
 
   create_table "import_coupons", force: :cascade do |t|
@@ -128,6 +141,9 @@ ActiveRecord::Schema.define(version: 20180508190548) do
   add_foreign_key "agencies", "areas"
   add_foreign_key "contracts", "providers"
   add_foreign_key "contracts", "users"
+  add_foreign_key "delivery_slip_details", "delivery_slips"
+  add_foreign_key "delivery_slip_details", "products"
+  add_foreign_key "delivery_slips", "agencies"
   add_foreign_key "import_coupons", "contracts"
   add_foreign_key "import_coupons", "users"
 end

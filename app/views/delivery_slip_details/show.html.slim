@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Amount:
+  = @delivery_slip_detail.amount
+p
+  strong Unit:
+  = @delivery_slip_detail.unit
+p
+  strong Product:
+  = @delivery_slip_detail.product
+p
+  strong Delivery slip:
+  = @delivery_slip_detail.delivery_slip
+
+=> link_to 'Edit', edit_delivery_slip_detail_path(@delivery_slip_detail)
+'|
+=< link_to 'Back', delivery_slip_details_path
