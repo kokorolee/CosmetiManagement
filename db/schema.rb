@@ -47,10 +47,10 @@ ActiveRecord::Schema.define(version: 20180508182238) do
   create_table "contracts", force: :cascade do |t|
     t.date "date_create"
     t.decimal "total_money"
+    t.bigint "user_id"
     t.bigint "provider_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
     t.index ["provider_id"], name: "index_contracts_on_provider_id"
     t.index ["user_id"], name: "index_contracts_on_user_id"
   end
@@ -124,6 +124,8 @@ ActiveRecord::Schema.define(version: 20180508182238) do
   end
 
   add_foreign_key "agencies", "areas"
+  add_foreign_key "contracts", "providers"
+  add_foreign_key "contracts", "users"
   add_foreign_key "import_coupons", "contracts"
   add_foreign_key "import_coupons", "users"
 end

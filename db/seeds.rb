@@ -9,7 +9,7 @@
 if Area.pluck(:id).empty?
   for i in 1..50 do
     a = Area.create(
-      name: Faker::Address.state
+      name: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s
     )
     for i in 1..rand(10) do
       a.agencies.create(

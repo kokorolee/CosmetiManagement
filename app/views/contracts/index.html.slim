@@ -5,6 +5,8 @@ table
     tr
       th Date create
       th Total money
+      th User
+      th Provider
       th
       th
       th
@@ -14,6 +16,8 @@ table
       tr
         td = contract.date_create
         td = contract.total_money
+        td = contract.user
+        td = contract.provider
         td = link_to 'Show', contract
         td = link_to 'Edit', edit_contract_path(contract)
         td = link_to 'Destroy', contract, data: { confirm: 'Are you sure?' }, method: :delete
