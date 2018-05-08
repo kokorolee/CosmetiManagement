@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
   belongs_to :provider
-  has_many :contract_details
-  has_many :contracts, :through => :contract_details
+  has_and_belongs_to_many :contracts
+  # has_many :contracts
 end

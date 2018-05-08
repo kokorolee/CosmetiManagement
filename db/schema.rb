@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 20180505112540) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "type"
     t.string "usage"
     t.integer "price"
     t.string "unit"
