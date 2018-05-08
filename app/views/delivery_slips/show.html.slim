@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Date deliver:
+  = @delivery_slip.date_deliver
+p
+  strong Date received:
+  = @delivery_slip.date_received
+p
+  strong Total money:
+  = @delivery_slip.total_money
+
+=> link_to 'Edit', edit_delivery_slip_path(@delivery_slip)
+'|
+=< link_to 'Back', delivery_slips_path

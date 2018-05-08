@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :delivery_slips
   resources :agencies
   resources :contract_details
   resources :areas

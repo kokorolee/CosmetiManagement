@@ -1,0 +1,18 @@
+= form_for @delivery_slip do |f|
+  - if @delivery_slip.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@delivery_slip.errors.count, "error")} prohibited this delivery_slip from being saved:"
+      ul
+        - @delivery_slip.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :date_deliver
+    = f.date_select :date_deliver
+  .field
+    = f.label :date_received
+    = f.date_select :date_received
+  .field
+    = f.label :total_money
+    = f.text_field :total_money
+  .actions = f.submit

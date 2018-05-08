@@ -1,0 +1,25 @@
+h1 Listing delivery_slips
+
+table
+  thead
+    tr
+      th Date deliver
+      th Date received
+      th Total money
+      th
+      th
+      th
+
+  tbody
+    - @delivery_slips.each do |delivery_slip|
+      tr
+        td = delivery_slip.date_deliver
+        td = delivery_slip.date_received
+        td = delivery_slip.total_money
+        td = link_to 'Show', delivery_slip
+        td = link_to 'Edit', edit_delivery_slip_path(delivery_slip)
+        td = link_to 'Destroy', delivery_slip, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Delivery slip', new_delivery_slip_path
