@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @agency.name
+p
+  strong Address:
+  = @agency.address
+p
+  strong Phone no:
+  = @agency.phone_no
+p
+  strong Tax code:
+  = @agency.tax_code
+p
+  strong Area:
+  = @agency.area
+
+=> link_to 'Edit', edit_agency_path(@agency)
+'|
+=< link_to 'Back', agencies_path

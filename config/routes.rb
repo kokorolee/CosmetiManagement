@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :agencies
   resources :contract_details
   resources :areas
   resources :contracts
