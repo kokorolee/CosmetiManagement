@@ -11,12 +11,22 @@ if Area.pluck(:id).empty?
     a = Area.create(
       name: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s
     )
-    for i in 1..rand(10) do
+
+    for i in 1..rand(1..10) do
       a.agencies.create(
         name: Faker::Zelda.character,
         address: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s,
         phone_no: Faker::PhoneNumber.phone_number,
         tax_code: Faker::Number.number(10)
+      )
+      a.users.create(
+        name: Faker::Name.name,
+        email: Faker::Internet.email,
+        password: '123123',
+        phone_no: Faker::PhoneNumber.phone_number,
+        address: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s,
+        birthday: Faker::Date.birthday(18, 30) ,
+        gender: Faker::Boolean.boolean
       )
     end
   end
@@ -30,26 +40,13 @@ if Provider.pluck(:id).empty?
       phone_no: Faker::PhoneNumber.phone_number,
       tax_code: Faker::Number.number(10),
     )
-    for i in 1..rand(20)
+    for i in 1..rand(1..20)
       a.products.create(
         name: Faker::Dune.title,
         description: Faker::Dune.quote,
         usage: Faker::Job.key_skill,
       )
     end
-  end
-end
-if User.pluck(:id).empty?
-  for i in 1..30 do
-    User.create(
-      name: Faker::Name.name,
-      email: Faker::Internet.email,
-      password: '123123',
-      phone_no: Faker::PhoneNumber.phone_number,
-      address: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s,
-      birthday: Faker::Date.birthday(18, 30) ,
-      gender: Faker::Boolean.boolean
-    )
   end
 end
 if Contract.pluck(:id).empty?
