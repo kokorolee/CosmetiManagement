@@ -1,0 +1,25 @@
+h1 Listing import_coupons
+
+table
+  thead
+    tr
+      th Date import
+      th User
+      th Contract
+      th
+      th
+      th
+
+  tbody
+    - @import_coupons.each do |import_coupon|
+      tr
+        td = import_coupon.date_import
+        td = import_coupon.user
+        td = import_coupon.contract
+        td = link_to 'Show', import_coupon
+        td = link_to 'Edit', edit_import_coupon_path(import_coupon)
+        td = link_to 'Destroy', import_coupon, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Import coupon', new_import_coupon_path
