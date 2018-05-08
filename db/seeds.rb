@@ -52,3 +52,13 @@ if User.pluck(:id).empty?
     )
   end
 end
+if Contract.pluck(:id).empty?
+  for i in 1..50 do
+      Contract.create(
+        date_create: Date.today - rand(1..30),
+        total_money: rand(10**3..10**5),
+        user_id: rand(1..30),
+        provider_id: i
+      )
+  end
+end

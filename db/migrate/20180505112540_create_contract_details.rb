@@ -5,7 +5,7 @@ class CreateContractDetails < ActiveRecord::Migration[5.1]
       t.integer :unit_price
 
       t.belongs_to :product, index: true
-      t.belongs_to :provider, index: true
+      t.belongs_to :contract, index: true
 
       t.timestamps
     end

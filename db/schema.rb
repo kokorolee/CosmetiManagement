@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508182238) do
+ActiveRecord::Schema.define(version: 20180508190548) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(version: 20180508182238) do
     t.integer "amount"
     t.integer "unit_price"
     t.bigint "product_id"
-    t.bigint "provider_id"
+    t.bigint "contract_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_contract_details_on_contract_id"
     t.index ["product_id"], name: "index_contract_details_on_product_id"
-    t.index ["provider_id"], name: "index_contract_details_on_provider_id"
   end
 
   create_table "contracts", force: :cascade do |t|
@@ -51,6 +51,8 @@ ActiveRecord::Schema.define(version: 20180508182238) do
     t.bigint "provider_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "contract_detail_id"
+    t.index ["contract_detail_id"], name: "index_contracts_on_contract_detail_id"
     t.index ["provider_id"], name: "index_contracts_on_provider_id"
     t.index ["user_id"], name: "index_contracts_on_user_id"
   end
