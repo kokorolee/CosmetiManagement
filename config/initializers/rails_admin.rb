@@ -30,6 +30,7 @@ RailsAdmin.config do |config|
   config.model 'User' do
     list do
       field :name
+      field :gender
       field :created_at
     end
   end
