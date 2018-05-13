@@ -8,6 +8,5 @@ class User < ApplicationRecord
   has_many :import_coupons
 
   GENDERS = ['Male', 'Female']
-  validates_inclusion_of :gender, :in => GENDERS
 
 end
