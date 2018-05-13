@@ -6,4 +6,8 @@ class User < ApplicationRecord
   belongs_to :area, optional: true
   has_many :contracts
   has_many :import_coupons
+
+  GENDERS = ['Male', 'Female']
+  validates_inclusion_of :gender, :in => GENDERS
+
 end

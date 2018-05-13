@@ -7,12 +7,6 @@ RailsAdmin.config do |config|
     warden.authenticate! scope: :user
   end
   config.current_user_method(&:current_user)
-  # RailsAdmin.config do |config|
-  #   config.authenticate_with do
-  #     warden.authenticate! scope: :user
-  #   end
-  #   config.current_user_method(&:current_user)
-  # end
   ## == Cancan ==
   # config.authorize_with :cancan
 
@@ -30,8 +24,26 @@ RailsAdmin.config do |config|
   config.model 'User' do
     list do
       field :name
+      field :email
       field :gender
+      field :birth_date
+      field :address
+      field :phone_no
+      field :area_id
       field :created_at
+    end
+  end
+  config.model "User" do
+    edit do
+      field :name
+      field :email
+      field :password
+      field :password_confirmation
+      field :gender
+      field :birth_date
+      field :address
+      field :phone_no
+      field :area_id
     end
   end
   config.actions do
@@ -44,10 +56,6 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
-
-    ## With an audit adapter, you can add:
-    # history_index
-    # history_show
   end
 
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180513023554) do
+ActiveRecord::Schema.define(version: 20180513100434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,16 +33,16 @@ ActiveRecord::Schema.define(version: 20180513023554) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "catelogies", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.text "description"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "contract_details", force: :cascade do |t|
     t.integer "amount"
-    t.integer "unit_price"
+    t.integer "unit", default: 0
     t.bigint "product_id"
     t.bigint "contract_id"
     t.datetime "created_at", null: false
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20180513023554) do
 
   create_table "delivery_slip_details", force: :cascade do |t|
     t.integer "amount"
-    t.string "unit"
+    t.string "unit", default: "vnđ"
     t.bigint "product_id"
     t.bigint "delivery_slip_id"
     t.datetime "created_at", null: false
@@ -99,7 +99,7 @@ ActiveRecord::Schema.define(version: 20180513023554) do
     t.string "name"
     t.text "description"
     t.integer "price"
-    t.string "unit"
+    t.string "unit", default: "vnđ"
     t.date "date_import"
     t.date "date_export"
     t.integer "number_import"
@@ -108,8 +108,8 @@ ActiveRecord::Schema.define(version: 20180513023554) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "provider_id"
-    t.bigint "catelogy_id"
-    t.index ["catelogy_id"], name: "index_products_on_catelogy_id"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["provider_id"], name: "index_products_on_provider_id"
   end
 
@@ -135,12 +135,12 @@ ActiveRecord::Schema.define(version: 20180513023554) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "gender"
-    t.date "birthday"
-    t.string "address"
-    t.string "phone_no"
     t.bigint "area_id"
     t.string "name"
+    t.string "gender"
+    t.string "address"
+    t.string "phone_no"
+    t.string "birth_date"
     t.index ["area_id"], name: "index_users_on_area_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

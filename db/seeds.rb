@@ -36,10 +36,10 @@ if Area.pluck(:id).empty?
     end
   end
 end
-if Catelogy.pluck(:id).empty?
+if Category.pluck(:id).empty?
   for i in 1..5 do
     puts name = Faker::Zelda.character
-    Catelogy.create(
+    Category.create(
       name: name
     )
   end
@@ -58,7 +58,7 @@ if Provider.pluck(:id).empty?
       b = a.products.create(
         name: Faker::Dune.title,
         description: Faker::Dune.quote,
-        catelogy_id: rand(1..5),
+        category_id: rand(1..5),
         price: rand(10**3..10**9),
         unit: '$',
         date_import: Date.today - rand(1..100)
