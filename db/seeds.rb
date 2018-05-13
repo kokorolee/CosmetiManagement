@@ -7,18 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 if Area.pluck(:id).empty?
-  for i in 1..50 do
+  for i in 1..rand(20..50) do
+    puts name = Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s
     a = Area.create(
-      name: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s
+      name: name
     )
 
     for i in 1..rand(1..10) do
+      puts name = Faker::Zelda.character
       a.agencies.create(
-        name: Faker::Zelda.character,
+        name: name,
         address: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s,
         phone_no: Faker::PhoneNumber.phone_number,
         tax_code: Faker::Number.number(10)
       )
+    end
+    for i in 1..rand(10) do
+      puts name = Faker::Name.name
       a.users.create(
         name: Faker::Name.name,
         email: Faker::Internet.email,
@@ -31,35 +36,58 @@ if Area.pluck(:id).empty?
     end
   end
 end
-
+if Catelogy.pluck(:id).empty?
+  for i in 1..5 do
+    puts name = Faker::Zelda.character
+    Catelogy.create(
+      name: name
+    )
+  end
+end
 if Provider.pluck(:id).empty?
-  for i in 1..50 do
+  for i in 1..rand(20..50) do
+    puts name = Faker::Simpsons.character
     a = Provider.create(
-      name: Faker::Simpsons.character,
+      name: name,
       address: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s,
       phone_no: Faker::PhoneNumber.phone_number,
       tax_code: Faker::Number.number(10),
     )
     for i in 1..rand(1..20)
       date = Date.today - rand(30)
-      a.products.create(
+      b = a.products.create(
         name: Faker::Dune.title,
         description: Faker::Dune.quote,
-        usage: Faker::Job.key_skill,
+        catelogy_id: rand(1..5),
+        price: rand(10**3..10**9),
+        unit: '$',
+        date_import: Date.today - rand(1..100)
+
       )
-      DeliverySlip.create(
+    end
+    for i in 1..rand(10) do
+      b = DeliverySlip.create(
         date_deliver: date,
         date_received: date + rand(20),
         total_money: rand(10**3..10**6),
         agency_id: a.id
       )
+      for i in 1..rand(10) do
+        DeliverySlipDetail.create(
+          amount: rand(1..20),
+          unit: '$',
+          product_id: rand(1..500),
+          delivery_slip_id: rand(1..200)
+        )
+      end
     end
   end
 end
 if Contract.pluck(:id).empty?
-  for i in 1..50 do
+  for i in 1..rand(20..50) do
+    puts date_create = Date.today - rand(1..30)
       Contract.create(
-        date_create: Date.today - rand(1..30),
+        date_create: date_create,
         total_money: rand(10**3..10**5),
         user_id: rand(1..30),
         provider_id: i

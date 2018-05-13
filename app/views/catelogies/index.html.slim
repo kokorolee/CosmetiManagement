@@ -1,0 +1,23 @@
+h1 Listing catelogies
+
+table
+  thead
+    tr
+      th Name
+      th Description
+      th
+      th
+      th
+
+  tbody
+    - @catelogies.each do |catelogy|
+      tr
+        td = catelogy.name
+        td = catelogy.description
+        td = link_to 'Show', catelogy
+        td = link_to 'Edit', edit_catelogy_path(catelogy)
+        td = link_to 'Destroy', catelogy, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Catelogy', new_catelogy_path

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :catelogies
   resources :delivery_slip_details
   resources :import_coupons
   resources :delivery_slips
