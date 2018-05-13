@@ -7,13 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 if Area.pluck(:id).empty?
-  for i in 1..rand(20..50) do
+  for i in 1..1 do
     puts name = Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s
     a = Area.create(
       name: name
     )
 
-    for i in 1..rand(1..10) do
+    for i in 1..rand(1) do
       puts name = Faker::Zelda.character
       a.agencies.create(
         name: name,
@@ -22,7 +22,7 @@ if Area.pluck(:id).empty?
         tax_code: Faker::Number.number(10)
       )
     end
-    for i in 1..rand(10) do
+    for i in 1..rand(1) do
       puts name = Faker::Name.name
       a.users.create(
         name: Faker::Name.name,
@@ -45,7 +45,7 @@ if Catelogy.pluck(:id).empty?
   end
 end
 if Provider.pluck(:id).empty?
-  for i in 1..rand(20..50) do
+  for i in 1..1 do
     puts name = Faker::Simpsons.character
     a = Provider.create(
       name: name,
@@ -53,7 +53,7 @@ if Provider.pluck(:id).empty?
       phone_no: Faker::PhoneNumber.phone_number,
       tax_code: Faker::Number.number(10),
     )
-    for i in 1..rand(1..20)
+    for i in 1..rand(1..1)
       date = Date.today - rand(30)
       b = a.products.create(
         name: Faker::Dune.title,
@@ -65,18 +65,18 @@ if Provider.pluck(:id).empty?
 
       )
     end
-    for i in 1..rand(10) do
+    for i in 1..rand(1) do
       b = DeliverySlip.create(
         date_deliver: date,
         date_received: date + rand(20),
         total_money: rand(10**3..10**6),
         agency_id: a.id
       )
-      for i in 1..rand(10) do
+      for i in 1..rand(1) do
         DeliverySlipDetail.create(
           amount: rand(1..20),
           unit: '$',
-          product_id: rand(1..500),
+          product_id: rand(1..10),
           delivery_slip_id: rand(1..200)
         )
       end
@@ -84,7 +84,7 @@ if Provider.pluck(:id).empty?
   end
 end
 if Contract.pluck(:id).empty?
-  for i in 1..rand(20..50) do
+  for i in 1..1 do
     puts date_create = Date.today - rand(1..30)
       Contract.create(
         date_create: date_create,

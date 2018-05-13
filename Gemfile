@@ -58,6 +58,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'slim-rails'
 gem 'devise'
 gem 'rails_admin'
+gem 'rails_admin_rollincode', '~> 1.0'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'faker'
