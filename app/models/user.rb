@@ -7,6 +7,6 @@ class User < ApplicationRecord
   has_many :contracts
   has_many :receipt_slips
 
-  GENDERS = ['Male', 'Female']
-
+  extend Enumerize
+  enumerize :gender, in: [:Male, :Female]
 end
