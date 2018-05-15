@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Date receipt:
+  = @receipt_slip.date_receipt
+
+=> link_to 'Edit', edit_receipt_slip_path(@receipt_slip)
+'|
+=< link_to 'Back', receipt_slips_path

@@ -1,0 +1,21 @@
+h1 Listing receipt_slips
+
+table
+  thead
+    tr
+      th Date receipt
+      th
+      th
+      th
+
+  tbody
+    - @receipt_slips.each do |receipt_slip|
+      tr
+        td = receipt_slip.date_receipt
+        td = link_to 'Show', receipt_slip
+        td = link_to 'Edit', edit_receipt_slip_path(receipt_slip)
+        td = link_to 'Destroy', receipt_slip, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Receipt slip', new_receipt_slip_path

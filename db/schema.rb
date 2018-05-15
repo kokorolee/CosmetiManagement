@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180515160014) do
+ActiveRecord::Schema.define(version: 20180515164614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,8 +59,10 @@ ActiveRecord::Schema.define(version: 20180515160014) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "contract_detail_id"
+    t.bigint "receipt_slip_id"
     t.index ["contract_detail_id"], name: "index_contracts_on_contract_detail_id"
     t.index ["provider_id"], name: "index_contracts_on_provider_id"
+    t.index ["receipt_slip_id"], name: "index_contracts_on_receipt_slip_id"
     t.index ["user_id"], name: "index_contracts_on_user_id"
   end
 
@@ -113,13 +115,9 @@ ActiveRecord::Schema.define(version: 20180515160014) do
   end
 
   create_table "receipt_slips", force: :cascade do |t|
-    t.date "date_import"
-    t.bigint "user_id"
-    t.bigint "contract_id"
+    t.date "date_receipt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["contract_id"], name: "index_receipt_slips_on_contract_id"
-    t.index ["user_id"], name: "index_receipt_slips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -141,8 +139,10 @@ ActiveRecord::Schema.define(version: 20180515160014) do
     t.string "address"
     t.string "phone_no"
     t.date "birth_date"
+    t.bigint "receipt_slip_id"
     t.index ["area_id"], name: "index_users_on_area_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["receipt_slip_id"], name: "index_users_on_receipt_slip_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -152,6 +152,4 @@ ActiveRecord::Schema.define(version: 20180515160014) do
   add_foreign_key "delivery_slip_details", "delivery_slips"
   add_foreign_key "delivery_slip_details", "products"
   add_foreign_key "delivery_slips", "agencies"
-  add_foreign_key "receipt_slips", "contracts"
-  add_foreign_key "receipt_slips", "users"
 end

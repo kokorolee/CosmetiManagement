@@ -1,0 +1,12 @@
+= form_for @receipt_slip do |f|
+  - if @receipt_slip.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@receipt_slip.errors.count, "error")} prohibited this receipt_slip from being saved:"
+      ul
+        - @receipt_slip.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :date_receipt
+    = f.date_select :date_receipt
+  .actions = f.submit

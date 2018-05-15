@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :receipt_slips
   resources :categories
   resources :catelogies
   resources :delivery_slip_details
