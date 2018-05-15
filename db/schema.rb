@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180515164614) do
+ActiveRecord::Schema.define(version: 20180515171000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20180515164614) do
 
   create_table "delivery_slip_details", force: :cascade do |t|
     t.integer "amount"
-    t.string "unit", default: "vnđ"
+    t.string "unit_price", default: "vnđ"
     t.bigint "product_id"
     t.bigint "delivery_slip_id"
     t.datetime "created_at", null: false
