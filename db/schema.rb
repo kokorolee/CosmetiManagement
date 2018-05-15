@@ -59,10 +59,8 @@ ActiveRecord::Schema.define(version: 20180515164614) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "contract_detail_id"
-    t.bigint "receipt_slip_id"
     t.index ["contract_detail_id"], name: "index_contracts_on_contract_detail_id"
     t.index ["provider_id"], name: "index_contracts_on_provider_id"
-    t.index ["receipt_slip_id"], name: "index_contracts_on_receipt_slip_id"
     t.index ["user_id"], name: "index_contracts_on_user_id"
   end
 
@@ -118,6 +116,10 @@ ActiveRecord::Schema.define(version: 20180515164614) do
     t.date "date_receipt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "contract_id"
+    t.index ["contract_id"], name: "index_receipt_slips_on_contract_id"
+    t.index ["user_id"], name: "index_receipt_slips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -139,10 +141,8 @@ ActiveRecord::Schema.define(version: 20180515164614) do
     t.string "address"
     t.string "phone_no"
     t.date "birth_date"
-    t.bigint "receipt_slip_id"
     t.index ["area_id"], name: "index_users_on_area_id"
     t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["receipt_slip_id"], name: "index_users_on_receipt_slip_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
