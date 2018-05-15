@@ -1,96 +1,73 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# if Area.pluck(:id).empty?
+#   areas = JSON.parse(File.read('/area_2018-05-15_14h30m38.json'))
+#   areas.each do |a|
+#     Area.create!(a.to_h)
+#   end
+# end
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# if Agency.pluck(:id).empty?
+#   agencies = JSON.parse(File.read('/agency_2018-05-15_14h30m10.json'))
+#   agencies.each do |a|
+#     Agency.create!(a.to_h)
+#   end
+# end
+# if Category.pluck(:id).empty?
+#   categories = JSON.parse(File.read('/category_2018-05-15_21h44m48.json'))
+#   categories.each do |a|
+#     Category.create!(a.to_h)
+#   end
+# end
+User.destroy_all
+Agency.destroy_all
+Area.destroy_all
+Product.destroy_all
+Provider.destroy_all
+Category.destroy_all
+
+providers = JSON.parse(File.read('db/provider_2018-05-15_14h31m26.json'))
+products = JSON.parse(File.read('db/product_2018-05-15_14h51m32.json'))
+categories = JSON.parse(File.read('db/category_2018-05-15_21h44m48.json'))
+agencies = JSON.parse(File.read('db/agency_2018-05-15_14h30m10.json'))
+areas = JSON.parse(File.read('db/area_2018-05-15_14h30m38.json'))
+users = JSON.parse(File.read('db/user_2018-05-15_15h04m12.json'))
+if User.pluck(:id).empty?
+  users.each do |u|
+    puts u
+    User.create!(u.to_h)
+  end
+end
 
 if Area.pluck(:id).empty?
-  for i in 1..1 do
-    puts name = Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s
-    a = Area.create(
-      name: name
-    )
-
-    for i in 1..rand(1) do
-      puts name = Faker::Zelda.character
-      a.agencies.create(
-        name: name,
-        address: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s,
-        phone_no: Faker::PhoneNumber.phone_number,
-        tax_code: Faker::Number.number(10)
-      )
-    end
-    for i in 1..rand(1) do
-      puts name = Faker::Name.name
-      a.users.create(
-        name: Faker::Name.name,
-        email: Faker::Internet.email,
-        password: '123123',
-        phone_no: Faker::PhoneNumber.phone_number,
-        address: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s,
-        birthday: Faker::Date.birthday(18, 30) ,
-        gender: Faker::Boolean.boolean
-      )
-    end
+  areas.each do |u|
+    puts u
+    Area.create!(u.to_h)
   end
 end
+
+if Agency.pluck(:id).empty?
+  agencies.each do |u|
+    puts u
+    Agency.create!(u.to_h)
+  end
+end
+
 if Category.pluck(:id).empty?
-  for i in 1..5 do
-    puts name = Faker::Zelda.character
-    Category.create(
-      name: name
-    )
+  categories.each do |u|
+    puts u
+    Category.create!(u.to_h)
   end
 end
-if Provider.pluck(:id).empty?
-  for i in 1..1 do
-    puts name = Faker::Simpsons.character
-    a = Provider.create(
-      name: name,
-      address: Faker::Address.street_address.to_s + Faker::Address.street_name.to_s + Faker::Address.state.to_s,
-      phone_no: Faker::PhoneNumber.phone_number,
-      tax_code: Faker::Number.number(10),
-    )
-    for i in 1..rand(1..1)
-      date = Date.today - rand(30)
-      b = a.products.create(
-        name: Faker::Dune.title,
-        description: Faker::Dune.quote,
-        category_id: rand(1..5),
-        price: rand(10**3..10**9),
-        unit: '$',
-        date_import: Date.today - rand(1..100)
 
-      )
-    end
-    for i in 1..rand(1) do
-      b = DeliverySlip.create(
-        date_deliver: date,
-        date_received: date + rand(20),
-        total_money: rand(10**3..10**6),
-        agency_id: a.id
-      )
-      for i in 1..rand(1) do
-        DeliverySlipDetail.create(
-          amount: rand(1..20),
-          unit: '$',
-          product_id: rand(1..10),
-          delivery_slip_id: rand(1..200)
-        )
-      end
-    end
+if Provider.pluck(:id).empty?
+  providers.each do |u|
+    puts u
+    Provider.create!(u.to_h)
   end
 end
-if Contract.pluck(:id).empty?
-  for i in 1..1 do
-    puts date_create = Date.today - rand(1..30)
-      Contract.create(
-        date_create: date_create,
-        total_money: rand(10**3..10**5),
-        user_id: rand(1..30),
-        provider_id: i
-      )
+
+if Product.pluck(:id).empty?
+  products.each do |u|
+    puts u
+    Product.create!(u.to_h)
   end
 end

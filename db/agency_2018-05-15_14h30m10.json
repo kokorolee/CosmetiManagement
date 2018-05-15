@@ -1,0 +1,253 @@
+[{
+  "id": 30,
+  "name": "Beskin Ca Mau",
+  "address": "144 Nguyen Tat Thanh Street, Ward 8, Ca Mau City, Ca Mau",
+  "phone_no": "0290 3818 969",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:33:44.656Z",
+  "updated_at": "2018-05-13T18:33:44.656Z",
+  "area_id": 9
+}, {
+  "id": 29,
+  "name": "Beskin Bac Lieu",
+  "address": "384-386-388, 5 Tran Phu Hamlet, Ward 7, Bac Lieu",
+  "phone_no": "0291 3828 494",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:33:03.822Z",
+  "updated_at": "2018-05-13T18:33:03.822Z",
+  "area_id": 9
+}, {
+  "id": 28,
+  "name": "Beskin Hau Giang",
+  "address": "27-429-431-433 Tran Hung Dao, Ward 1, Vi Thanh, Hau Giang",
+  "phone_no": "091 824 79 19",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:31:58.772Z",
+  "updated_at": "2018-05-13T18:31:58.772Z",
+  "area_id": 9
+}, {
+  "id": 27,
+  "name": "Beskin Kien Giang",
+  "address": "Area 2, Third District, An Bien District, TT. Tuesday, Tuan Bien, Kien Giang Province",
+  "phone_no": "0297 3515 555",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:31:05.881Z",
+  "updated_at": "2018-05-13T18:31:05.881Z",
+  "area_id": 9
+}, {
+  "id": 26,
+  "name": "Beskin An Giang",
+  "address": "315/1, Tran Hung Dao Street, My Xuyen Ward, My Long City, Long Xuyen City, An Giang Province",
+  "phone_no": "0296 3941 409",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:30:23.045Z",
+  "updated_at": "2018-05-13T18:30:23.045Z",
+  "area_id": 9
+}, {
+  "id": 25,
+  "name": "Beskin Dong Thap",
+  "address": "4-86, Le Hong Phong Street, Ward 1, Ward 5, Cao Lanh, Dong Thap",
+  "phone_no": "0277 3861 681",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:29:36.908Z",
+  "updated_at": "2018-05-13T18:29:36.908Z",
+  "area_id": 9
+}, {
+  "id": 24,
+  "name": "Beskin Tien Giang",
+  "address": "Ap Ham Rong, TT. Tan Hiep, Chau Thanh, Tien Giang",
+  "phone_no": "090 924 34 84",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:28:44.695Z",
+  "updated_at": "2018-05-13T18:28:44.695Z",
+  "area_id": 9
+}, {
+  "id": 23,
+  "name": "Beskin Vung Tau",
+  "address": "35, Street 30/4, Ward 9, Vung Tau City, Ba Ria - Vung Tau",
+  "phone_no": " 0254 3858 889",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:27:19.247Z",
+  "updated_at": "2018-05-13T18:27:19.247Z",
+  "area_id": 8
+}, {
+  "id": 22,
+  "name": "Beskin Gia Lai",
+  "address": "Hung Vuong, Hoi Thuong Ward, Pleiku City, Gia Lai",
+  "phone_no": "0164 250 0724",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:26:07.447Z",
+  "updated_at": "2018-05-13T18:26:07.447Z",
+  "area_id": 7
+}, {
+  "id": 21,
+  "name": "Beskin Quang Ngai",
+  "address": "789 Quang Trung, Nghia Chanh Nam, Quang Ngai",
+  "phone_no": "0255 3831 715",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:24:39.539Z",
+  "updated_at": "2018-05-13T18:24:39.539Z",
+  "area_id": 6
+}, {
+  "id": 20,
+  "name": "Beskin Da Nang",
+  "address": "207 Phan Chau Trinh, Phuoc Ninh, Hai Chau, Da Nang",
+  "phone_no": "0236 3565 887",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:23:58.206Z",
+  "updated_at": "2018-05-13T18:23:58.206Z",
+  "area_id": 6
+}, {
+  "id": 19,
+  "name": "Beskin Nghe An",
+  "address": "217 Le Loi Street, Vinh City, Nghe An",
+  "phone_no": "0238 3677 789",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:23:15.933Z",
+  "updated_at": "2018-05-13T18:23:15.933Z",
+  "area_id": 5
+}, {
+  "id": 18,
+  "name": "Beskin Thanh Hoa",
+  "address": "But Son Town, Hoang Hoa District, Thanh Hoa Province, Hoang Vinh, Hoang Hoa Hoa, Thanh Hoa",
+  "phone_no": "0237 3865 599",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:22:26.297Z",
+  "updated_at": "2018-05-13T18:22:26.297Z",
+  "area_id": 5
+}, {
+  "id": 17,
+  "name": "Beskin Bac Ninh",
+  "address": "20 Tran Hung Dao, Dai Phuc, Bac Ninh",
+  "phone_no": " 0222 3855 464",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:21:39.505Z",
+  "updated_at": "2018-05-13T18:21:39.505Z",
+  "area_id": 4
+}, {
+  "id": 16,
+  "name": "Beskin Vinh Phuc",
+  "address": "Me Linh, Khai Quang, Vinh Yen, Vinh Phuc",
+  "phone_no": "0211 3847 458",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:20:57.779Z",
+  "updated_at": "2018-05-13T18:20:57.779Z",
+  "area_id": 4
+}, {
+  "id": 15,
+  "name": "Beskin Thai Nguyen",
+  "address": "35/1 Bac Kan Street. Thai Nguyen, Thai Nguyen",
+  "phone_no": "208 3858 595",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:20:09.671Z",
+  "updated_at": "2018-05-13T18:20:09.671Z",
+  "area_id": 3
+}, {
+  "id": 14,
+  "name": "Beskin Ha Giang",
+  "address": "Group 17, Nguyen Trai Ward, Ha Giang Town, Nguyen Trai Ward, Ha Giang",
+  "phone_no": "0219 3887 666",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:19:20.927Z",
+  "updated_at": "2018-05-13T18:19:20.927Z",
+  "area_id": 3
+}, {
+  "id": 13,
+  "name": "Beskin Dien Bien",
+  "address": "Muong Ang Town, Muong Ang District, Dien Bien Province, TT. Muong Ang, Muong Ang, Dien Bien",
+  "phone_no": "0215 3865 110",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:18:28.815Z",
+  "updated_at": "2018-05-13T18:18:28.815Z",
+  "area_id": 2
+}, {
+  "id": 12,
+  "name": "Beskin Son La",
+  "address": "Co Noi Village, Mai Son District, Son La Province",
+  "phone_no": "0212 3746 033",
+  "tax_code": "",
+  "created_at": "2018-05-13T18:17:42.207Z",
+  "updated_at": "2018-05-13T18:17:42.207Z",
+  "area_id": 2
+}, {
+  "id": 10,
+  "name": "Beskin Can Tho",
+  "address": "3/2 Street, Xuan Khanh Ward, Ninh Kieu District, Can Tho City...",
+  "phone_no": "0292 3832 663",
+  "tax_code": "",
+  "created_at": "2018-05-13T04:13:38.743Z",
+  "updated_at": "2018-05-13T17:09:30.174Z",
+  "area_id": 9
+}, {
+  "id": 9,
+  "name": "Beskin Saigon",
+  "address": "61A Cao Thang, Ward 3, District 3, Ho Chi Minh",
+  "phone_no": "093 219 71 14",
+  "tax_code": "",
+  "created_at": "2018-05-13T04:12:36.063Z",
+  "updated_at": "2018-05-13T17:08:30.813Z",
+  "area_id": 8
+}, {
+  "id": 8,
+  "name": "Beskin Lam Dong",
+  "address": "46 Phan Dinh Phung, Ward 1, Da Lat City, Lam Dong",
+  "phone_no": "0263 3524 446",
+  "tax_code": "",
+  "created_at": "2018-05-13T04:11:33.603Z",
+  "updated_at": "2018-05-13T17:07:45.702Z",
+  "area_id": 7
+}, {
+  "id": 7,
+  "name": "Beskin Khanh Hoa",
+  "address": "1 Ngo Thoi Nhiem Street, Tan Lap Ward, Nha Trang City, Khanh Hoa Province",
+  "phone_no": "0258 2211 590",
+  "tax_code": "",
+  "created_at": "2018-05-13T04:08:09.808Z",
+  "updated_at": "2018-05-13T17:07:23.949Z",
+  "area_id": 6
+}, {
+  "id": 6,
+  "name": "Beskin Hue",
+  "address": "42, Yet Kieu Street, Phu Hoa Ward, Hue City, Thua Thien Hue Province, Thuan Hoa District, Hue City, Thua Thien Hue Province",
+  "phone_no": "0234 3566 566",
+  "tax_code": "",
+  "created_at": "2018-05-13T04:06:17.729Z",
+  "updated_at": "2018-05-13T17:07:01.609Z",
+  "area_id": 5
+}, {
+  "id": 5,
+  "name": "Beskin Hai Phong",
+  "address": "29 Ton Dan, Pham Hong Thai, Hong Bang, Hai Phong",
+  "phone_no": "090 613 05 82",
+  "tax_code": "",
+  "created_at": "2018-05-13T04:04:16.979Z",
+  "updated_at": "2018-05-13T17:06:41.872Z",
+  "area_id": 4
+}, {
+  "id": 4,
+  "name": "Beskin Ha Noi",
+  "address": "17 Tran Hung Dao, Phan Chu Trinh, Hoan Kiem, Hanoi",
+  "phone_no": "024 7302 3020",
+  "tax_code": "",
+  "created_at": "2018-05-13T04:03:08.996Z",
+  "updated_at": "2018-05-13T17:06:17.898Z",
+  "area_id": 4
+}, {
+  "id": 3,
+  "name": "Beskin Quang Ninh",
+  "address": "Column 3, Ha Long, Quang Ninh",
+  "phone_no": "0203 3628 690",
+  "tax_code": "",
+  "created_at": "2018-05-13T04:01:31.996Z",
+  "updated_at": "2018-05-13T17:05:51.366Z",
+  "area_id": 3
+}, {
+  "id": 2,
+  "name": "Beskin Hoa Binh",
+  "address": "No.10 - Chi Lang Street - Phuong Lam Ward - Hoa Binh - T. Hoa Binh",
+  "phone_no": "02183 600 410",
+  "tax_code": "",
+  "created_at": "2018-05-13T03:58:04.071Z",
+  "updated_at": "2018-05-13T17:05:19.354Z",
+  "area_id": 2
+}]

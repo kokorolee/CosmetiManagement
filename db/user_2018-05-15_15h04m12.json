@@ -1,0 +1,92 @@
+[{
+  "email": "mynhan.ta@gmail.com",
+  "name": "Ta My Nhan",
+  "gender": "Female",
+  "address": "Ca Mau, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "huyentrang.dangthi@gmail.com",
+  "name": "Dang Thi Huyen Trang",
+  "gender": "Female",
+  "address": "An Giang, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "kimcuong.vo@gmail.com",
+  "name": "Vo Kim Cuong",
+  "gender": "Female",
+  "address": "Kien Giang, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "huynhnhu.honguyen@gmail,com",
+  "name": "Ho Nguyen Huynh Nhu",
+  "gender": "Female",
+  "address": "Hau Giang, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "camthu.nguyenthi@gmail.com",
+  "name": "Nguyen Thi Cam Thu",
+  "gender": "Female",
+  "address": "Tien Giang, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "doantrang.dangthuy@gmail.com",
+  "name": "Dang Thuy Doan Trang",
+  "gender": "Female",
+  "address": "Bac Lieu, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "ngocgiau.nguyenthi@gmail.com",
+  "name": "Nguyen Thi Ngoc Giau",
+  "gender": "Female",
+  "address": "Dong Thap, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "tththuy@gmail,com",
+  "name": "Tran Thi Hong Thuy",
+  "gender": "Female",
+  "address": "Vinh Long, Vietnam",
+  "phone_no": "09766612354",
+  "password": 123123
+}, {
+  "email": "hungviet.nguyen@gmail.com",
+  "name": "Nguyen Hung Viet",
+  "gender": "Male",
+  "address": "Vinh Long, Vietnam",
+  "phone_no": "0986864409",
+  "password": 123123
+}, {
+  "email": "tranb1400860@student.ctu.edu.vn",
+  "name": "Tran Thi Huyen Tran",
+  "gender": "Female",
+  "address": "Soc Trang, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "huyb1411327@student.ctu.edu.vn",
+  "name": "Nguyen Khac Huy",
+  "gender": "Male",
+  "address": "Can Tho, Vietnam",
+  "phone_no": "",
+  "password": 123123
+}, {
+  "email": "thaonguyen.nguyenviet@gmail.com",
+  "name": "Nguyen Viet Thao Nguyen",
+  "gender": "Female",
+  "address": "Vinh Long, Vietnam",
+  "phone_no": "01278280296",
+  "password": 123123
+}, {
+  "email": "kokoro.lehoang@gmail.com",
+  "name": "Le Hoang Tam",
+  "gender": "Male",
+  "address": "Vinh Long, Vietnam",
+  "phone_no": "0964105491",
+  "password": 123123
+}]
