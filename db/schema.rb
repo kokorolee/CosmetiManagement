@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180513190540) do
+ActiveRecord::Schema.define(version: 20180515160014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,16 +85,6 @@ ActiveRecord::Schema.define(version: 20180513190540) do
     t.index ["agency_id"], name: "index_delivery_slips_on_agency_id"
   end
 
-  create_table "import_coupons", force: :cascade do |t|
-    t.date "date_import"
-    t.bigint "user_id"
-    t.bigint "contract_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["contract_id"], name: "index_import_coupons_on_contract_id"
-    t.index ["user_id"], name: "index_import_coupons_on_user_id"
-  end
-
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -120,6 +110,16 @@ ActiveRecord::Schema.define(version: 20180513190540) do
     t.string "tax_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "receipt_slips", force: :cascade do |t|
+    t.date "date_import"
+    t.bigint "user_id"
+    t.bigint "contract_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contract_id"], name: "index_receipt_slips_on_contract_id"
+    t.index ["user_id"], name: "index_receipt_slips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -152,6 +152,6 @@ ActiveRecord::Schema.define(version: 20180513190540) do
   add_foreign_key "delivery_slip_details", "delivery_slips"
   add_foreign_key "delivery_slip_details", "products"
   add_foreign_key "delivery_slips", "agencies"
-  add_foreign_key "import_coupons", "contracts"
-  add_foreign_key "import_coupons", "users"
+  add_foreign_key "receipt_slips", "contracts"
+  add_foreign_key "receipt_slips", "users"
 end
