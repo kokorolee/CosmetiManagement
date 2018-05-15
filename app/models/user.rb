@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   belongs_to :area, optional: true
   has_many :contracts
-  has_many :import_coupons
+  has_many :receipt_slips
 
   GENDERS = ['Male', 'Female']
 
